@@ -1,0 +1,1168 @@
+/* =========================================================
+   CUREARLY - HOMEPAGE
+   Clean Medical White Card UI
+   ========================================================= */
+
+
+/* =========================================================
+   GENERAL
+   ========================================================= */
+
+main {
+    width: 100%;
+    overflow: hidden;
+}
+
+
+/* =========================================================
+   HERO
+   ========================================================= */
+
+/* =========================================================
+   HERO SECTION
+   ========================================================= */
+
+.hero {
+    width: 90%;
+    max-width: 1250px;
+
+    min-height: calc(100vh - 112px);
+
+    margin: 0 auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 60px 30px 90px;
+
+    box-sizing: border-box;
+
+    text-align: center;
+}
+
+
+/* =========================================================
+   HERO CONTENT
+   ========================================================= */
+
+.hero-content {
+    width: 100%;
+    max-width: 1250px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+/* =========================================================
+   HERO HEADING
+   ========================================================= */
+
+.hero-content h1 {
+    margin: 0;
+
+    color: #980202;
+
+    /*
+       Keeps the heading on one line on desktop
+    */
+    white-space: nowrap;
+
+    font-size: clamp(42px, 4.2vw, 64px);
+
+    line-height: 1.1;
+
+    font-weight: 800;
+
+    letter-spacing: -1.5px;
+}
+
+
+/* =========================================================
+   HERO DESCRIPTION
+   ========================================================= */
+
+.hero-content p {
+    max-width: 760px;
+
+    margin: 28px auto 35px;
+
+    color: #654f53;
+
+    font-size: 18px;
+
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   HERO BUTTONS
+   ========================================================= */
+
+.hero-buttons {
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    gap: 18px;
+
+    margin-top: 5px;
+}
+
+
+/* Both buttons */
+
+.hero-buttons button {
+    min-width: 165px;
+
+    padding: 15px 28px;
+
+    border-radius: 10px;
+
+    font-family: inherit;
+
+    font-size: 16px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        background 0.25s ease;
+}
+
+
+/* =========================================================
+   GET STARTED
+   ========================================================= */
+
+.hero-buttons button:first-child {
+    color: #ffffff;
+
+    background: #980202;
+
+    border: 1px solid #980202;
+
+    box-shadow:
+        0 8px 20px rgba(152, 2, 2, 0.18);
+}
+
+
+.hero-buttons button:first-child:hover {
+    background: #7d0000;
+
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 12px 25px rgba(152, 2, 2, 0.24);
+}
+
+
+/* =========================================================
+   HOW IT WORKS
+   ========================================================= */
+
+.hero-buttons button:last-child {
+    color: #980202;
+
+    background: #ffffff;
+
+    border: 1px solid #e6cbd2;
+
+    box-shadow:
+        0 6px 18px rgba(120, 20, 40, 0.06);
+}
+
+
+.hero-buttons button:last-child:hover {
+    color: #7d0000;
+
+    background: #fff7f8;
+
+    border-color: #d9aeb9;
+
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 10px 23px rgba(120, 20, 40, 0.10);
+}
+
+
+/* =========================================================
+   HERO VISUAL
+   ========================================================= */
+
+/*
+   The JSX currently has an empty hero-visual.
+   Since there is no illustration inside it yet,
+   don't reserve 42% of the screen for an empty box.
+*/
+
+.hero-visual {
+    display: none;
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 800px) {
+
+    .hero {
+        width: 92%;
+
+        min-height: calc(100vh - 100px);
+
+        padding: 50px 10px 70px;
+    }
+
+
+    .hero-content h1 {
+        /*
+           Allow wrapping on smaller screens.
+           Otherwise the heading will overflow.
+        */
+
+        white-space: normal;
+
+        font-size: clamp(38px, 8vw, 52px);
+
+        line-height: 1.12;
+    }
+
+
+    .hero-content p {
+        max-width: 600px;
+
+        font-size: 16px;
+
+        margin-top: 22px;
+    }
+
+
+    .hero-buttons {
+        width: 100%;
+
+        flex-direction: column;
+
+        gap: 12px;
+    }
+
+
+    .hero-buttons button {
+        width: 220px;
+    }
+}
+
+.why-curearly {
+    width: 90%;
+    max-width: 1300px;
+
+    margin: 0 auto;
+
+    padding: 100px 20px;
+
+    box-sizing: border-box;
+}
+
+
+.why-curearly h2 {
+    margin: 0;
+
+    text-align: center;
+
+    color: #980202;
+
+    font-size: 42px;
+    font-weight: 800;
+}
+
+
+/* Cards */
+
+.why-cards {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 25px;
+
+    margin-top: 50px;
+}
+
+
+/* Individual card */
+
+.why-card {
+    padding: 35px 30px;
+
+    min-height: 190px;
+
+    box-sizing: border-box;
+
+    text-align: center;
+
+    background: #ffffff;
+
+    border: 1px solid #f0dce1;
+
+    border-radius: 18px;
+
+    box-shadow: 0 8px 25px rgba(120, 20, 40, 0.06);
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        border-color 0.25s ease;
+}
+
+
+.why-card:hover {
+    transform: translateY(-6px);
+
+    border-color: #e5b9c4;
+
+    box-shadow: 0 14px 32px rgba(120, 20, 40, 0.10);
+}
+
+
+.why-card h3 {
+    margin: 0 0 14px;
+
+    color: #980202;
+
+    font-size: 22px;
+    font-weight: 800;
+}
+
+
+.why-card p {
+    margin: 0;
+
+    color: #765858;
+
+    font-size: 15px;
+
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   HOW IT WORKS
+   ========================================================= */
+
+.how-it-works {
+    width: 90%;
+    max-width: 1300px;
+
+    margin: 0 auto;
+
+    padding: 100px 20px;
+
+    box-sizing: border-box;
+}
+
+
+.how-it-works h2 {
+    margin: 0;
+
+    text-align: center;
+
+    color: #980202;
+
+    font-size: 42px;
+    font-weight: 800;
+}
+
+
+/* Steps */
+
+.steps {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 25px;
+
+    margin-top: 65px;
+
+    position: relative;
+}
+
+
+/* Connecting line */
+
+.steps::before {
+    content: "";
+
+    position: absolute;
+
+    top: 40px;
+    left: 10%;
+    right: 10%;
+
+    height: 2px;
+
+    background: #efcdd5;
+
+    z-index: 0;
+}
+
+
+/* Individual step */
+
+.step {
+    position: relative;
+    z-index: 1;
+
+    padding: 75px 25px 30px;
+
+    min-height: 190px;
+
+    box-sizing: border-box;
+
+    text-align: center;
+
+    background: #ffffff;
+
+    border: 1px solid #f0dce1;
+
+    border-radius: 18px;
+
+    box-shadow: 0 8px 25px rgba(120, 20, 40, 0.06);
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+
+.step:hover {
+    transform: translateY(-7px);
+
+    box-shadow: 0 15px 35px rgba(120, 20, 40, 0.10);
+}
+
+
+/* Circle around visual */
+
+.step span {
+    position: absolute;
+
+    top: -22px;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    width: 76px;
+    height: 76px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #fff5f7;
+
+    border: 5px solid #ffffff;
+
+    box-shadow: 0 5px 18px rgba(120, 20, 40, 0.08);
+
+    font-size: 0;
+
+    transition: transform 0.25s ease;
+}
+
+
+/* Patient */
+
+.step:nth-child(1) span::after {
+    content: "👤";
+    font-size: 30px;
+}
+
+
+/* Report */
+
+.step:nth-child(2) span::after {
+    content: "📄";
+    font-size: 28px;
+}
+
+
+/* Analysis */
+
+.step:nth-child(3) span::after {
+    content: "🔬";
+    font-size: 28px;
+}
+
+
+/* Doctor */
+
+.step:nth-child(4) span::after {
+    content: "🧑‍⚕️";
+    font-size: 30px;
+}
+
+
+.step:hover span {
+    transform: translateX(-50%) scale(1.08);
+}
+
+
+.step h3 {
+    margin: 5px 0 12px;
+
+    color: #980202;
+
+    font-size: 19px;
+    font-weight: 800;
+}
+
+
+.step p {
+    margin: 0;
+
+    color: #765858;
+
+    font-size: 14px;
+
+    line-height: 1.65;
+}
+
+
+/* =========================================================
+   YOUR REPORTS
+   ========================================================= */
+
+.your-reports {
+    width: 90%;
+    max-width: 1300px;
+
+    margin: 0 auto;
+
+    padding: 100px 20px;
+
+    box-sizing: border-box;
+}
+
+
+.your-reports h2 {
+    margin: 0;
+
+    text-align: center;
+
+    color: #980202;
+
+    font-size: 42px;
+    font-weight: 800;
+}
+
+
+.report-cards {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 25px;
+
+    margin-top: 50px;
+}
+
+
+.report-card {
+    min-height: 240px;
+
+    padding: 35px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    box-sizing: border-box;
+
+    background: #ffffff;
+
+    border: 1px solid #f0dce1;
+
+    border-radius: 18px;
+
+    box-shadow: 0 8px 25px rgba(120, 20, 40, 0.06);
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+
+.report-card:hover {
+    transform: translateY(-7px);
+
+    box-shadow: 0 15px 35px rgba(120, 20, 40, 0.10);
+}
+
+
+/* Report icon */
+
+.report-card span {
+    width: 68px;
+    height: 68px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 20px;
+
+    border-radius: 16px;
+
+    background: #fff1f4;
+
+    border: 1px solid #f1d5dc;
+
+    font-size: 30px;
+}
+
+
+.report-card h3 {
+    margin: 0 0 10px;
+
+    color: #980202;
+
+    font-size: 21px;
+    font-weight: 800;
+}
+
+
+.report-card p {
+    margin: 0;
+
+    color: #765858;
+
+    font-size: 14px;
+
+    line-height: 1.6;
+}
+
+
+/* =========================================================
+   SEE YOUR HEALTH CLEARLY
+   ========================================================= */
+
+.health-overview {
+    width: 90%;
+    max-width: 1300px;
+
+    margin: 0 auto;
+
+    padding: 120px 20px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 70px;
+
+    box-sizing: border-box;
+}
+
+
+/* Text */
+
+.health-overview-text {
+    width: 45%;
+}
+
+
+.health-overview-text h2 {
+    margin: 0 0 20px;
+
+    color: #980202;
+
+    font-size: 45px;
+
+    line-height: 1.15;
+
+    font-weight: 800;
+}
+
+
+.health-overview-text p {
+    margin: 0;
+
+    color: #765858;
+
+    font-size: 17px;
+
+    line-height: 1.8;
+}
+
+
+/* Dashboard */
+
+.health-dashboard-preview {
+    width: 45%;
+
+    padding: 30px;
+
+    box-sizing: border-box;
+
+    background: #ffffff;
+
+    border: 1px solid #f0dce1;
+
+    border-radius: 20px;
+
+    box-shadow: 0 12px 35px rgba(120, 20, 40, 0.07);
+}
+
+
+.health-dashboard-preview h3 {
+    margin: 0;
+
+    color: #980202;
+
+    font-size: 22px;
+    font-weight: 800;
+}
+
+
+/* Risk */
+
+.risk-level {
+    margin: 25px 0;
+
+    padding: 18px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    border-radius: 12px;
+
+    background: #fff5f7;
+
+    border: 1px solid #f1d8de;
+}
+
+
+.risk-level span {
+    color: #765858;
+
+    font-size: 14px;
+}
+
+
+.risk-level strong {
+    color: #a51c1c;
+
+    font-size: 16px;
+}
+
+
+/* Health items */
+
+.health-items {
+    display: grid;
+
+    gap: 10px;
+}
+
+
+.health-items div {
+    padding: 15px;
+
+    background: #fafafa;
+
+    border: 1px solid #eeeeee;
+
+    border-radius: 10px;
+
+    color: #765858;
+
+    font-size: 14px;
+}
+
+
+/* =========================================================
+   WHEN IT MATTERS
+   ========================================================= */
+
+.when-it-matters {
+    width: 90%;
+    max-width: 1300px;
+
+    margin: 0 auto;
+
+    padding: 65px 60px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 60px;
+
+    box-sizing: border-box;
+
+    background: #ffffff;
+
+    border: 1px solid #f0dce1;
+
+    border-radius: 22px;
+
+    box-shadow: 0 12px 35px rgba(120, 20, 40, 0.07);
+}
+
+
+/* Text */
+
+.when-it-matters > div:first-child {
+    width: 52%;
+}
+
+
+.when-it-matters h2 {
+    margin: 0 0 20px;
+
+    color: #980202;
+
+    font-size: 42px;
+
+    line-height: 1.15;
+
+    font-weight: 800;
+}
+
+
+.when-it-matters p {
+    margin: 0 0 28px;
+
+    color: #765858;
+
+    font-size: 16px;
+
+    line-height: 1.75;
+}
+
+
+/* Button */
+
+.when-it-matters button {
+    padding: 13px 25px;
+
+    border: none;
+
+    border-radius: 10px;
+
+    color: #ffffff;
+
+    background: #980202;
+
+    font-family: inherit;
+
+    font-size: 15px;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    box-shadow: 0 7px 18px rgba(152, 2, 2, 0.16);
+
+    transition: all 0.25s ease;
+}
+
+
+.when-it-matters button:hover {
+    background: #7d0000;
+
+    transform: translateY(-2px);
+}
+
+
+/* Location */
+
+.location-preview {
+    width: 40%;
+    height: 280px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    box-sizing: border-box;
+
+    border-radius: 18px;
+
+    background: #fff5f7;
+
+    border: 1px solid #f0d5dc;
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+
+.location-preview::before {
+    content: "📍";
+
+    font-size: 55px;
+
+    opacity: 0.8;
+}
+
+
+/* =========================================================
+   CREATE PROFILE
+   ========================================================= */
+
+.create-profile {
+    width: 88%;
+    max-width: 1100px;
+
+    margin: 120px auto;
+
+    padding: 70px 40px;
+
+    box-sizing: border-box;
+
+    text-align: center;
+
+    background: #ffffff;
+
+    border: 1px solid #efd7dd;
+
+    border-radius: 22px;
+
+    box-shadow: 0 15px 40px rgba(120, 20, 40, 0.08);
+}
+
+
+.create-profile h2 {
+    margin: 0 0 15px;
+
+    color: #980202;
+
+    font-size: 42px;
+
+    font-weight: 800;
+}
+
+
+.create-profile p {
+    max-width: 600px;
+
+    margin: 0 auto 30px;
+
+    color: #765858;
+
+    font-size: 16px;
+
+    line-height: 1.7;
+}
+
+
+.create-profile button {
+    padding: 14px 28px;
+
+    border: none;
+
+    border-radius: 10px;
+
+    color: #ffffff;
+
+    background: #980202;
+
+    font-family: inherit;
+
+    font-size: 16px;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    box-shadow: 0 8px 20px rgba(152, 2, 2, 0.18);
+
+    transition: all 0.25s ease;
+}
+
+
+.create-profile button:hover {
+    background: #7d0000;
+
+    transform: translateY(-2px);
+
+    box-shadow: 0 12px 25px rgba(152, 2, 2, 0.23);
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 1000px) {
+
+    .hero {
+        flex-direction: column;
+
+        text-align: center;
+
+        padding-top: 60px;
+    }
+
+    .hero-content {
+        width: 100%;
+    }
+
+    .hero-content p {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+    }
+
+    .hero-visual {
+        width: 80%;
+    }
+
+    .why-cards,
+    .report-cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .steps {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .steps::before {
+        display: none;
+    }
+
+    .health-overview {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .health-overview-text,
+    .health-dashboard-preview {
+        width: 100%;
+    }
+
+    .when-it-matters {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .when-it-matters > div:first-child,
+    .location-preview {
+        width: 100%;
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 650px) {
+
+    .hero {
+        width: 92%;
+
+        padding: 50px 10px;
+    }
+
+    .hero-content h1 {
+        font-size: 43px;
+
+        letter-spacing: -1px;
+    }
+
+    .hero-content p {
+        font-size: 16px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+    }
+
+    .hero-buttons button {
+        width: 100%;
+    }
+
+    .hero-visual {
+        width: 100%;
+
+        min-height: 280px;
+    }
+
+    .why-curearly,
+    .how-it-works,
+    .your-reports {
+        width: 92%;
+
+        padding: 75px 10px;
+    }
+
+    .why-curearly h2,
+    .how-it-works h2,
+    .your-reports h2 {
+        font-size: 34px;
+    }
+
+    .why-cards,
+    .report-cards,
+    .steps {
+        grid-template-columns: 1fr;
+    }
+
+    .health-overview {
+        width: 92%;
+
+        padding: 80px 10px;
+    }
+
+    .health-overview-text h2 {
+        font-size: 35px;
+    }
+
+    .when-it-matters {
+        width: 92%;
+
+        padding: 50px 25px;
+    }
+
+    .when-it-matters h2 {
+        font-size: 34px;
+    }
+
+    .create-profile {
+        width: 92%;
+
+        margin: 80px auto;
+
+        padding: 55px 25px;
+    }
+
+    .create-profile h2 {
+        font-size: 34px;
+    }
+}

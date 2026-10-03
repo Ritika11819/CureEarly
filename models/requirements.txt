@@ -1,0 +1,8 @@
+pandas>=2.2
+scikit-learn>=1.5
+joblib>=1.4
+torch>=2.3
+torchvision>=0.18
+datasets>=2.20
+transformers>=4.44
+accelerate>=0.33

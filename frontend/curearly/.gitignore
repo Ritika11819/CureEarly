@@ -1,0 +1,104 @@
+# =========================
+# Logs
+# =========================
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+
+# =========================
+# Environment / Secrets
+# =========================
+.env
+.env.*
+!.env.example
+
+
+# =========================
+# Node / React
+# =========================
+node_modules/
+dist/
+dist-ssr/
+build/
+*.local
+
+
+# =========================
+# Java / Spring Boot / Maven
+# =========================
+target/
+*.class
+*.jar
+*.war
+*.ear
+
+
+# =========================
+# Python / FastAPI
+# =========================
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+.venv/
+venv/
+env/
+ENV/
+
+.pytest_cache/
+.mypy_cache/
+
+*.egg-info/
+
+
+# =========================
+# IntelliJ IDEA
+# =========================
+.idea/
+*.iml
+*.iws
+*.ipr
+
+
+# =========================
+# VS Code
+# =========================
+.vscode/*
+!.vscode/extensions.json
+
+
+# =========================
+# OS
+# =========================
+.DS_Store
+Thumbs.db
+
+
+# =========================
+# IDE / Visual Studio
+# =========================
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+
+# =========================
+# Temporary / Generated Files
+# =========================
+tmp/
+temp/
+*.tmp
+
+
+# =========================
+# Local uploads / generated data
+# =========================
+uploads/

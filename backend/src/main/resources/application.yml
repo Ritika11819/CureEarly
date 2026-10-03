@@ -1,0 +1,44 @@
+server:
+  port: ${SERVER_PORT:8080}
+  error:
+    include-message: never
+
+spring:
+  application:
+    name: curearly-api
+
+  data:
+    mongodb:
+      uri: ${MONGODB_URI:mongodb://localhost:27017/curearly}
+      auto-index-creation: true
+
+  servlet:
+    multipart:
+      max-file-size: 30MB
+      max-request-size: 35MB
+
+  security:
+    oauth2:
+      client:
+        registration:
+          google:
+            client-id: ${GOOGLE_CLIENT_ID}
+            client-secret: ${GOOGLE_CLIENT_SECRET}
+            scope:
+              - openid
+              - profile
+              - email
+
+app:
+  frontend-url: ${FRONTEND_URL:http://localhost:5173}
+
+  jwt:
+    secret: ${JWT_SECRET}
+    expiration-minutes: ${JWT_EXPIRATION_MINUTES:60}
+
+  cookie-secure: ${COOKIE_SECURE:false}
+
+  google-oauth-enabled: ${GOOGLE_OAUTH_ENABLED:false}
+
+  prediction:
+    service-url: ${PREDICTION_SERVICE_URL:http://localhost:8000}

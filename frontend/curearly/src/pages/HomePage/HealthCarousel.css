@@ -1,0 +1,216 @@
+.health-carousel {
+    width: 90%;
+    max-width: 1400px;
+
+    margin: 40px auto 100px;
+    padding: 50px;
+    box-sizing: border-box;
+    background-color: white;
+    border-radius: 20px;
+}
+
+
+.carousel-content {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 60px;
+
+    min-height: 420px;
+}
+
+
+/* ================================
+   IMAGE
+   ================================ */
+
+.carousel-visual {
+    width: 62%;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    overflow: hidden;
+
+    border-radius: 22px;
+}
+
+
+.carousel-visual img {
+    width: 100%;
+
+    max-height: 480px;
+
+    object-fit: contain;
+
+    display: block;
+
+    animation: carouselImageIn 0.6s ease;
+}
+
+
+@keyframes carouselImageIn {
+
+    from {
+        opacity: 0;
+
+        transform: translateX(25px);
+    }
+
+    to {
+        opacity: 1;
+
+        transform: translateX(0);
+    }
+
+}
+
+
+/* ================================
+   TEXT
+   ================================ */
+
+.carousel-text {
+    width: 38%;
+
+    padding: 20px;
+}
+
+
+.carousel-label {
+    display: inline-block;
+
+    margin-bottom: 14px;
+
+    color: #c14a67;
+
+    font-size: 13px;
+
+    font-weight: 800;
+
+    letter-spacing: 2px;
+}
+
+
+.carousel-text h2 {
+    margin: 0 0 18px;
+
+    color: #980202;
+
+    font-size: 36px;
+
+    line-height: 1.2;
+
+    font-weight: 800;
+}
+
+
+.carousel-text p {
+    margin: 0;
+
+    color: #765858;
+
+    font-size: 16px;
+
+    line-height: 1.7;
+}
+
+
+/* ================================
+   DOTS
+   ================================ */
+
+.carousel-dots {
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    margin-top: 30px;
+}
+
+
+.carousel-dots button {
+    width: 9px;
+    height: 9px;
+
+    padding: 0;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background: #e7c5ce;
+
+    cursor: pointer;
+
+    transition: all 0.3s ease;
+}
+
+
+.carousel-dots button.active {
+    width: 28px;
+
+    border-radius: 20px;
+
+    background: #980202;
+}
+
+
+/* ================================
+   TABLET
+   ================================ */
+
+@media (max-width: 900px) {
+
+    .carousel-content {
+        flex-direction: column;
+
+        gap: 30px;
+    }
+
+    .carousel-visual,
+    .carousel-text {
+        width: 100%;
+    }
+
+    .carousel-text {
+        text-align: center;
+    }
+
+    .carousel-dots {
+        justify-content: center;
+    }
+}
+
+
+/* ================================
+   MOBILE
+   ================================ */
+
+@media (max-width: 600px) {
+
+    .health-carousel {
+        width: 94%;
+
+        margin-bottom: 70px;
+    }
+
+    .carousel-visual img {
+        max-height: 300px;
+    }
+
+    .carousel-text h2 {
+        font-size: 28px;
+    }
+
+    .carousel-text p {
+        font-size: 14px;
+    }
+}

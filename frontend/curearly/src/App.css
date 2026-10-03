@@ -1,0 +1,106 @@
+.header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 40px;
+  background-color: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(8px) saturate(180%);
+  -webkit-backdrop-filter: blur(8px) saturate(180%);
+  border-bottom: solid 1px rgba(220, 180, 190, 0.4);
+  box-shadow: 0 4px 20px rgba(120, 20, 40, 0.05);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.app-name-link {
+  text-decoration: none;
+}
+
+.logo-image{
+  height: 40px;
+  width: 40px;
+  margin-right: 10px;
+  border-radius: 8px;
+}
+
+.app-name{
+  display: flex;
+  flex-direction: row;
+  color: #980202;
+  font-size: 24px;
+  font-weight: 800;
+  align-items: center;
+  letter-spacing: -0.5px;
+}
+
+.options{
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  color: #980202;
+}
+
+.options a {
+  text-decoration: none;
+  color: #980202;
+  padding: 8px 14px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 15px;
+  transition: all 200ms ease;
+}
+
+.options a:hover{
+  background-color: #fff1f4;
+  color: #7d0000;
+}
+
+.header-register-pill {
+  background-color: #980202 !important;
+  color: #ffffff !important;
+  padding: 8px 18px !important;
+}
+
+.header-register-pill:hover {
+  background-color: #7d0000 !important;
+  color: #ffffff !important;
+}
+
+.user-greeting {
+  font-size: 14px;
+  font-weight: 600;
+  color: #654f53;
+  padding: 6px 12px;
+  background: #fff5f7;
+  border-radius: 20px;
+  border: 1px solid #f0dce1;
+}
+
+.header-logout-btn {
+  background: transparent;
+  border: 1.5px solid #980202;
+  color: #980202;
+  padding: 7px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  font-family: inherit;
+  font-weight: 700;
+  transition: all 200ms ease;
+}
+
+.header-logout-btn:hover {
+  background-color: #980202;
+  color: #ffffff;
+}
+
+.auth-loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 70vh;
+  font-size: 18px;
+  font-weight: 600;
+  color: #980202;
+}
